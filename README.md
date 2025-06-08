@@ -89,6 +89,7 @@ Git • Power BI • Gephi • PDCA • SWOT • 5W2H • Project Management •
 
 <img src="https://raw.githubusercontent.com/VitorAlmeida21/VitorAlmeida21/output/snake.svg" alt="Snake animation" />
 
+
 ---
 
 ### 🤝 Let’s Connect!
