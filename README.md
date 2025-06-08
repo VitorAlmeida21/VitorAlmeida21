@@ -1,6 +1,18 @@
 
 <h1 align="center">Hi there! 👋 I'm Vitor Almeida Xavier</h1>
 
+<div align="center">
+  <a href="https://www.linkedin.com/in/vitor-almeida-xavier-203655288/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:vitor200970@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://github.com/VitorAlmeida21">
+    <img src="https://img.shields.io/github/followers/VitorAlmeida21?style=for-the-badge&logo=github" />
+  </a>
+</div>
+
 ---
 
 ### 🎓 Education
@@ -43,21 +55,6 @@ I'm passionate about **teaching, learning, and building tech solutions**. I teac
 
 <img src="https://raw.githubusercontent.com/VitorAlmeida21/VitorAlmeida21/output/snake.svg" alt="Snake animation" />
 
----
-
-<div align="center">
-  <a href="https://www.linkedin.com/in/vitor-almeida-xavier-203655288/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:vitor200970@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://github.com/VitorAlmeida21">
-    <img src="https://img.shields.io/github/followers/VitorAlmeida21?style=for-the-badge&logo=github" />
-  </a>
-</div>
-
----
 
 ### 🏆 Achievements
 
