@@ -18,6 +18,8 @@ jobs:
           github_user_name: VitorAlmeida21
           outputs: |
             dist/snake.svg
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Push to GitHub
         uses: crazy-max/ghaction-github-pages@v3.1.0
