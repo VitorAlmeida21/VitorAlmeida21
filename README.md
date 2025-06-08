@@ -94,5 +94,5 @@ Git • Power BI • Gephi • PDCA • SWOT • 5W2H • Project Management •
 ### 🤝 Let’s Connect!
 
 If you’re into teaching, coding, or working with data, feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/vitor-almeida-xavier-203655288/) or send me an email at **vitor200970@gmail.com**
-
+<!-- trigger -->
 ---
