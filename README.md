@@ -38,7 +38,7 @@ I'm passionate about **teaching, learning, and building tech solutions**. I teac
 
 ### 🛠️ Tools & Technologies
 
-<div align="left">
+<div align="center">
   <img src="https://skillicons.dev/icons?i=python,java,javascript,php,html,css,mysql,git" />
 </div>
 
