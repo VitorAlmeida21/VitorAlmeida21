@@ -66,4 +66,5 @@ I'm passionate about **teaching, learning, and building tech solutions**. I teac
 - 👨‍💼 AI Chatbot & Dashboard – +55% process efficiency (UFABC Jr)
 
 ---
+<!-- coments --!>
 
