@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Roda todo dia à meia-noite UTC
+    - cron: "0 0 * * *"  # Executa todo dia à meia-noite UTC
   workflow_dispatch:
 
 jobs:
@@ -20,12 +20,10 @@ jobs:
           outputs: |
             dist/snake.svg
 
-      - name: Push to GitHub Pages
+      - name: Deploy snake.svg to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "Atualiza gráfico Snake 🐍"
-          keep_history: true
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
