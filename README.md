@@ -49,8 +49,8 @@ I'm passionate about **teaching, learning, and building tech solutions**. I teac
 ### 📈 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=VitorAlmeida21&show_icons=true&include_all_commits=true&count_private=true&theme=dracula" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VitorAlmeida21&layout=compact&langs_count=10&theme=dracula" height="180" />
+  <img src="./general-stats.svg" height="180" />
+  <img src="./top-langs.svg" height="180" />
 </div>
 
 ### 🐍 Snake Activity Graph
