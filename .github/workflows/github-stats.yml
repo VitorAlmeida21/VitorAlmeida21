@@ -3,22 +3,23 @@ name: Generate GitHub Stats with Token
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"  # Executa todo dia às 3h (Brasília)
+    - cron: "0 3 * * *"
 
 jobs:
   generate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository using personal token
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_STATS_TOKEN }}
 
       - name: Generate GitHub stats SVGs
         env:
           TOKEN: ${{ secrets.GH_STATS_TOKEN }}
         run: |
           curl -H "Authorization: token $TOKEN" "https://github-readme-stats.vercel.app/api?username=VitorAlmeida21&show_icons=true&include_all_commits=true&count_private=true&theme=dracula" -o general-stats.svg
-          
           curl -H "Authorization: token $TOKEN" "https://github-readme-stats.vercel.app/api/top-langs/?username=VitorAlmeida21&layout=compact&langs_count=10&count_private=true&theme=dracula" -o top-langs.svg
 
       - name: Commit and push generated files
@@ -29,5 +30,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add *.svg
           git commit -m "Atualiza SVGs de estatísticas GitHub" || echo "Nada para commitar"
-          git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
-          git push origin HEAD:main
+          git push origin main
