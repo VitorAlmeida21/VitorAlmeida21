@@ -2,7 +2,7 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Executa todo dia à meia-noite UTC
+    - cron: "0 0 * * *"  # Executa diariamente à meia-noite UTC
   workflow_dispatch:
 
 jobs:
@@ -19,6 +19,7 @@ jobs:
           github_user_name: VitorAlmeida21
           outputs: |
             dist/snake.svg
+          palette: github-dark
 
       - name: Deploy snake.svg to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
