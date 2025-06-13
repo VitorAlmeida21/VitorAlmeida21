@@ -1,31 +1,30 @@
 name: Generate GitHub Stats with Token
 
 on:
-  schedule:
-    - cron: "0 6 * * *"  # Atualiza diariamente às 3h da manhã (Brasil)
   workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"  # Atualiza todos os dias às 3h (Brasília)
 
 jobs:
-  generate-stats:
+  generate:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate stats using token
+      - name: Generate GitHub stats SVGs
+        env:
+          TOKEN: ${{ secrets.GH_STATS_TOKEN }}
         run: |
-          curl -H "Authorization: token ${{ secrets.GH_STATS_TOKEN }}" \
-          "https://github-readme-stats.vercel.app/api/top-langs?username=VitorAlmeida21&layout=compact&langs_count=10&theme=dracula&count_private=true" \
-          -o top-langs.svg
+          curl -H "Authorization: token $TOKEN" "https://github-readme-stats.vercel.app/api?username=VitorAlmeida21&show_icons=true&include_all_commits=true&count_private=true&theme=dracula" -o general-stats.svg
           
-          curl -H "Authorization: token ${{ secrets.GH_STATS_TOKEN }}" \
-          "https://github-readme-stats.vercel.app/api?username=VitorAlmeida21&show_icons=true&include_all_commits=true&count_private=true&theme=dracula" \
-          -o general-stats.svg
+          curl -H "Authorization: token $TOKEN" "https://github-readme-stats.vercel.app/api/top-langs/?username=VitorAlmeida21&layout=compact&langs_count=10&count_private=true&theme=dracula" -o top-langs.svg
 
-      - name: Commit and push stats
+      - name: Commit and push generated files
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add *.svg
-          git commit -m "Atualiza estatísticas GitHub Stats"
+          git commit -m "Atualiza SVGs de estatísticas GitHub" || echo "Nenhuma alteração para commitar"
           git push
